@@ -64,6 +64,64 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-sort" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/chentingting.github.io/2021/11/30/sort/" class="article-date">
+  <time datetime="2021-11-30T01:27:55.000Z" itemprop="datePublished">2021-11-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/chentingting.github.io/2021/11/30/sort/">sort</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><pre><code>def SelectionSort(nums: List[int]):
+n = len(nums)
+#每次循环从[i,n]中选出最小的，交换至i位置
+for i in range(n):
+    min_index = i
+    for j in range(i,n):
+        if nums[j]&lt;nums[min_index]:
+            min_index = j
+    nums[i],nums[min_index] = nums[min_index],nums[i]
+</code></pre>
+<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><pre><code>def InsertSort(nums:List[int]):
+n = len(nums)
+#每次循环从[0,i-1]中选择插入的位置为x，然后将x之后的已排序数字向后移一个
+for i in range(1,n):
+    insertNum = nums[i]
+    j = i-1
+    while j&gt;=0 and insertNum&lt;nums[j]:
+        nums[j+1] = nums[j]
+        j -= 1
+    nums[j+1] = insertNum
+    print(nums)
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://chentingting16.github.io/chentingting.github.io/2021/11/30/sort/" data-id="ckwli2bbu00011kv611i4f7x6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/chentingting.github.io/2021/11/26/hello-world/" class="article-date">
@@ -103,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chentingting16.github.io/chentingting.github.io/2021/11/26/hello-world/" data-id="ckwgdvdwb0000z8v67xg1f85y" class="article-share-link">Share</a>
+      <a data-url="https://chentingting16.github.io/chentingting.github.io/2021/11/26/hello-world/" data-id="ckwli2bbm00001kv6hcc8fivb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,6 +200,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/chentingting.github.io/2021/11/30/sort/">sort</a>
+          </li>
         
           <li>
             <a href="/chentingting.github.io/2021/11/26/hello-world/">hhhhhchenggong!</a>
